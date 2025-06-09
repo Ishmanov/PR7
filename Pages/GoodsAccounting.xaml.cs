@@ -22,23 +22,7 @@ namespace PR7.Pages
     /// </summary>
     public partial class GoodsAccounting : Page
     {
-        public class GoodItem
-        {
-            public string Article { get; set; }
-            public string Name { get; set; }
-            public string Category { get; set; }
-            public string UnitOfMeasurement { get; set; }
-            public double Count { get; set; }
-        }
-
-        public class ItemsMovements
-        {
-            public int OperationNumber { get; set; }
-            public string Article { get; set; }
-            public string OperationType { get; set; }
-            public double Count { get; set; }
-            public string Reason { get; set; }
-        }
+        
 
         public GoodsAccounting()
         {
@@ -78,7 +62,7 @@ namespace PR7.Pages
         {
             if (string.IsNullOrWhiteSpace(TextBox2.Text))
             {
-                TextBox2.Text = "Название";
+                TextBox2.Text = "Кол-во";
                 TextBox2.Foreground = Brushes.Gray;
                 _isPlaceholder2 = true;
             }
@@ -100,7 +84,7 @@ namespace PR7.Pages
         {
             if (string.IsNullOrWhiteSpace(ComboBox1.Text) && ComboBox1.SelectedItem == null)
             {
-                ComboBox1.Text = "Категория";
+                ComboBox1.Text = "Цена";
                 ComboBox1.Foreground = Brushes.Gray;
                 _isPlaceholder3 = true;
             }

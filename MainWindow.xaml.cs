@@ -16,6 +16,35 @@ using PR7.Pages;
 
 namespace PR7
 {
+
+    public class GoodItem
+    {
+        public string Article { get; set; }
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public string UnitOfMeasurement { get; set; }
+        public double Count { get; set; }
+    }
+
+    public class ItemsMovements
+    {
+        public int OperationNumber { get; set; }
+        public string Article { get; set; }
+        public string OperationType { get; set; }
+        public double Count { get; set; }
+        public string Reason { get; set; }
+    }
+    public class SupplierOrder
+    {
+        public int OrderNumber { get; set; }
+        public string Article { get; set; }
+        public string Name { get; set; } 
+        public double Quantity { get; set; }
+        public double Price { get; set; }
+        public string UnitOfMeasurement { get; set; } 
+        public DateTime DeliveryDate { get; set; }
+        public DateTime OrderDate { get; set; }
+    }
     public partial class MainWindow : Window
     {
         public MainWindow()

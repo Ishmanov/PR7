@@ -9,8 +9,113 @@
       Title="Orders To Suppliers">
 
     <Grid>
-        <Grid Background="Aqua">
-            <Button Margin="50"></Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.025*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.025*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.025*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.7*"/>
+                <RowDefinition/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.7*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Формирование заявки"  HorizontalAlignment="Left" Padding="0,0,0,0"/>
+
+            <Grid  Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="TextBox1"
+                         Text="Артикул"
+                         Foreground="Gray"
+                         GotFocus="GotFocus1"
+                         LostFocus="LostFocus1"
+                         TextAlignment="Center"
+                         VerticalContentAlignment="Center"/>
+
+                <TextBox x:Name="TextBox2" Grid.Column="2"
+                         Text="Кол-во"
+                         Foreground="Gray"
+                         GotFocus="GotFocus2"
+                         LostFocus="LostFocus2"
+                         TextAlignment="Center"
+                         VerticalContentAlignment="Center"/>
+
+                <TextBox x:Name="TextBox3" Grid.Column="4"
+                         Text="Цена"
+                         Foreground="Gray"
+                         GotFocus="GotFocus3"
+                         LostFocus="LostFocus3"
+                         TextAlignment="Center"
+                         VerticalContentAlignment="Center"/>
+
+                <DatePicker x:Name="DatePicker1" Grid.Column="6"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"/>
+
+                <Button Content="Отправить" Grid.Column="8" Click="Send_Button"/>
+            </Grid>
+
+            <Label Grid.Row="3" Content="Изменение даты доставки"  HorizontalAlignment="Left" Padding="0,0,0,0"/>
+
+            <Grid  Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="TextBox4"
+                         Text="Номер заказа"
+                         Foreground="Gray"
+                         GotFocus="GotFocus4"
+                         LostFocus="LostFocus4"
+                         TextAlignment="Center"
+                         VerticalContentAlignment="Center"/>
+                <DatePicker x:Name="DatePicker2" Grid.Column="2"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"/>
+                <Button Content="Отправить" Grid.Column="4" Click="Send2_Button"/>
+            </Grid>
+
+            <Grid  Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock x:Name="TextBlock1" TextWrapping="Wrap"/>
+                </ScrollViewer>
+                <Button Grid.Column="2" Click="GetInfo_Button" Content="Список заказов"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
