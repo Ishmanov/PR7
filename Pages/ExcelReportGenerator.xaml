@@ -9,6 +9,31 @@
       Title="Excel Report Generator">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.025*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.025*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.025*"/>
+        </Grid.RowDefinitions>
         
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Click="Export1_Button" Margin="10" Content="Экспорт товаров"/>
+            <Button Click="Export2_Button" Margin="10" Content="Экспорт движения товаров" Grid.Column="1"/>
+            <Button Click="Export3_Button" Margin="10" Content="Экспорт заказов" Grid.Row="1"/>
+            <Button Click="Export4_Button" Margin="10" Content="Экспорт табеля учета" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
     </Grid>
 </Page>

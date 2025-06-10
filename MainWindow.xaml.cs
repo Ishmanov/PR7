@@ -45,6 +45,18 @@ namespace PR7
         public DateTime DeliveryDate { get; set; }
         public DateTime OrderDate { get; set; }
     }
+    public class StaffWorkingHoursRecord
+    {
+        public string Date { get; set; } 
+        public string FullName { get; set; }
+        public TimeSpan? ArrivalTime { get; set; } 
+        public TimeSpan? DepartureTime { get; set; } 
+        public TimeSpan? BreakStartTime { get; set; } 
+        public TimeSpan? BreakEndTime { get; set; } 
+        public TimeSpan? BreakDuration { get; set; } 
+        public TimeSpan? WorkDuration { get; set; } 
+        public string Status { get; set; } 
+    }
     public partial class MainWindow : Window
     {
         public MainWindow()

@@ -9,6 +9,73 @@
       Title="Accounting Of Staff Working Hours">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.025*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.025*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.025*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+                <RowDefinition Height="3.5*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Регистрация приходов и уходов"  HorizontalAlignment="Left" Padding="0,0,0,4" VerticalAlignment="Bottom"/>
+
+            <Grid  Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.35*"/>
+                    <ColumnDefinition Width="0.06*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.06*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="TextBox1"
+                         Text="ФИО сотрудника"
+                         Foreground="Gray"
+                         GotFocus="GotFocus1"
+                         LostFocus="LostFocus1"
+                         TextAlignment="Center"
+                         VerticalContentAlignment="Center"/>
+                <ComboBox x:Name="ComboBox1" Grid.Column="2"
+                          IsEditable="True"
+                          StaysOpenOnEdit="True"
+                          IsDropDownOpen="False"
+                          Text="Действие" Foreground="Gray" GotFocus="MyComboBox_GotFocus1"
+                          LostFocus="MyComboBox_LostFocus1"
+                          SelectionChanged="MyComboBox_SelectionChanged1"
+                          HorizontalContentAlignment="Center"
+                          VerticalContentAlignment="Center">
+                    <ComboBoxItem Content="Приход на работу"/>
+                    <ComboBoxItem Content="Уход с работы"/>
+                    <ComboBoxItem Content="Приход с перерыва"/>
+                    <ComboBoxItem Content="Уход на перерыв"/>
+                </ComboBox>
+
+                <Button Content="Зарегистрировать" Grid.Column="4" Click="Send_Button"/>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock x:Name="TextBlock1" TextWrapping="Wrap"/>
+                </ScrollViewer>
+                <Button Grid.Column="2" Content="Табель учета" Click="Send2_Button"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

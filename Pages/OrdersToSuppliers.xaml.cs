@@ -112,7 +112,7 @@ namespace PR7.Pages
             DateTime? deliveryDate = DatePicker1.SelectedDate;
 
             if (string.IsNullOrWhiteSpace(articleInput) || articleInput == "Артикул" ||
-                string.IsNullOrWhiteSpace(quantityInput) || quantityInput == "Количество" ||
+                string.IsNullOrWhiteSpace(quantityInput) || quantityInput == "Кол-во" ||
                 string.IsNullOrWhiteSpace(priceInput) || priceInput == "Цена" ||
                 deliveryDate == null)
             {

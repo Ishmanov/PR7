@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR7"
         mc:Ignorable="d"
-        Title="Main" Height="450" Width="800">
+        Title="Main" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -28,10 +28,10 @@
                 <RowDefinition Height="1.6*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="1" Grid.Row="1" Click="Page1Open_Button"/>
-            <Button Grid.Column="1" Grid.Row="3" Click="Page2Open_Button"/>
-            <Button Grid.Column="1" Grid.Row="5" Click="Page3Open_Button"/>
-            <Button Grid.Column="1" Grid.Row="7" Click="Page4Open_Button"/>
+            <Button Grid.Column="1" Grid.Row="1" Click="Page1Open_Button" Content="Учет товаров" FontSize="10"/>
+            <Button Grid.Column="1" Grid.Row="3" Click="Page2Open_Button" Content="Заказы поставщикам" FontSize="10"/>
+            <Button Grid.Column="1" Grid.Row="5" Click="Page3Open_Button" Content="Учет рабочего времени персонала" FontSize="10"/>
+            <Button Grid.Column="1" Grid.Row="7" Click="Page4Open_Button" Content="Генератор отчетов в Excel" FontSize="10"/>
         </Grid>
         <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
         
